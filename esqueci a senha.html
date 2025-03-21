@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci a Senha - Churrasquinho do Cumpadi</title>
+    <link rel="stylesheet" href="esqueci a senha.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka+One&family=Lobster&display=swap" rel="stylesheet">
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu Compacto -->
+  <nav class="menu-compact">
+    <ul>
+      <li>
+        <a href="#">
+          <i class="fas fa-home"></i>
+          <span>Início</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span>Configurações</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-envelope"></i>
+          <span>Mensagens</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sair</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    
+    <!-- Animação de fundo -->
+    <div class="background-animation"></div>
+
+    <!-- Container de "Esqueci a Senha" -->
+    <div class="esqueci-senha-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Churrasquinho do Cumpadi">
+            <h1>Esqueci a Senha</h1>
+            <p>Vamos te ajudar a recuperar sua conta!</p>
+        </div>
+        <form action="/api/auth/esqueci-senha" method="POST">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <button type="submit" class="btn-redefinir">
+                <i class="fas fa-paper-plane"></i> Enviar Link de Redefinição
+            </button>
+        </form>
+        <div class="links">
+            <p>Lembrou da senha? <a href="perfil.html">Faça login</a></p>
+        </div>
+    </div>
+
+   
+
+    <!-- Scripts -->
+    <script src="esqueci a senha.js"></script>
+</body>
+</html>

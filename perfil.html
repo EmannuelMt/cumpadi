@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Criar Conta - Churrasquinho do Cumpadi</title>
+  <link rel="stylesheet" href="perfil.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Compacto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+  <!-- Menu Compacto -->
+  <nav class="menu-compact">
+    <ul>
+      <li>
+        <a href="#">
+          <i class="fas fa-home"></i>
+          <span>Início</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span>Configurações</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-envelope"></i>
+          <span>Mensagens</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sair</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <!-- Lado Esquerdo: Imagem de Fundo -->
+    <div class="left-side">
+      <img src="images/logo.png" alt="Logo Churrasquinho do Cumpadi" class="logo">
+    </div>
+
+    <!-- Lado Direito: Formulários de Login e Cadastro -->
+    <div class="right-side">
+      <div class="auth-container">
+        <div class="auth-card">
+          <div class="auth-header">
+            <h1 id="auth-title">Bem-vindo de volta</h1>
+            <p id="auth-subtitle">Faça login na sua conta</p>
+          </div>
+
+          <div class="auth-toggle">
+            <button id="btn-login" class="active">Login</button>
+            <button id="btn-cadastro">Criar Conta</button>
+          </div>
+
+          <!-- Formulário de Login -->
+          <form id="login-form" class="auth-form">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" name="username" placeholder="Usuário" required>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="btn-login">
+              <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+            <div class="divider">
+              <span>ou</span>
+            </div>
+            <div class="google-login">
+              <div id="g_id_onload"
+                data-client_id="SEU_CLIENT_ID_AQUI"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleGoogleLogin"
+                data-auto_prompt="false">
+              </div>
+              <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="filled_blue"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left">
+              </div>
+            </div>
+            <div class="links">
+              <a href="esqueci a senha.html" class="forgot-password-link">Esqueceu a senha?</a>
+            </div>
+          </form>
+
+          <!-- Formulário de Cadastro -->
+          <form id="cadastro-form" class="auth-form" style="display: none;">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha" required>
+            </div>
+            <button type="submit" class="btn-cadastro">
+              <i class="fas fa-user-plus"></i> Criar Conta
+            </button>
+            <div class="divider">
+              <span>ou</span>
+            </div>
+            <div class="google-login">
+              <div id="g_id_onload"
+                data-client_id="SEU_CLIENT_ID_AQUI"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleGoogleCadastro"
+                data-auto_prompt="false">
+              </div>
+              <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="filled_blue"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left">
+              </div>
+            </div>
+            <div class="links">
+              <p>Já tem uma conta? <a href="#" id="link-login">Faça login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="perfil.js"></script>
+</body>
+</html>
